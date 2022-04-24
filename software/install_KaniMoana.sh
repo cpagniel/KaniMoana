@@ -105,12 +105,12 @@ echo ""
 
 cd /home/pi
 
-echo "" >> ~/.bashrc
-echo "# Audio Capture for KaniMoana" >> ~/.bashrc
-echo "" >> ~/.bashrc
-echo "sleep 10" >> ~/.bashrc
-echo "cd /home/pi/kanimoana" >> ~/.bashrc
-echo "sudo ./KaniMoana.sh" >> ~/.bashrc
+sudo echo "" >> ~/.bashrc
+sudo echo "# Audio Capture for KaniMoana" >> ~/.bashrc
+sudo echo "" >> ~/.bashrc
+sudo echo "sleep 10" >> ~/.bashrc
+sudo echo "cd /home/pi/kanimoana" >> ~/.bashrc
+sudo echo "sudo ./KaniMoana.sh" >> ~/.bashrc
 
 # ------------------------------------------------------------
 # Shutdown to Add WittyPi & HifiBerry
