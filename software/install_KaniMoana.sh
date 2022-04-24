@@ -79,7 +79,7 @@ echo ""
 
 cd /home/pi/kanimoana/config
 
-wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/config/asound.conf
+sudo wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/config/asound.conf
 sudo cp asound.conf /etc
 
 # ------------------------------------------------------------
@@ -91,11 +91,11 @@ echo ""
 
 cd /home/pi/kanimoana
 
-wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/scripts/KaniMoana.sh
-chmod +x KaniMoana.sh
+sudo wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/scripts/KaniMoana.sh
+sudo chmod +x KaniMoana.sh
 
-wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/scripts/audio_recording.sh
-chmod +x audio_recording.sh
+sudo wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/scripts/audio_recording.sh
+sudo chmod +x audio_recording.sh
 
 # ------------------------------------------------------------
 # Edit .bashrc
