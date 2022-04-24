@@ -4,7 +4,7 @@
 #
 #
 #  Author: Camille Pagniello
-#  Last Edit: 04/23/2022
+#  Last Edit: 04/24/2022
 #  Script for audio recording
 #
 # ------------------------------------------------------------
@@ -13,7 +13,6 @@
 
 echo ""
 echo "Start audio_recording.sh"
-echo ""
 
 # ------------------------------------------------------------
 # Write to .log file
@@ -21,13 +20,13 @@ echo ""
 
 RUNFILE="KaniMoana1.log"
 
-cd /media/DATA && echo "Start Time of audio_recording.sh" $(date) >> "${RUNFILE}"
+cd /media/DATA && sudo echo "Start Time of audio_recording.sh" $(date) >> "${RUNFILE}"
 
 # ------------------------------------------------------------
 # Starting audio capture...
 # ------------------------------------------------------------
 
-cd /media/DATA && echo "Start Time of audio capture:" $(date) >> "${RUNFILE}"
+cd /media/DATA && sudo echo "Start Time of audio capture:" $(date) >> "${RUNFILE}"
 
 # ------------------------------------------------------------
 # Audio capture
@@ -37,13 +36,13 @@ cd /media/DATA && echo "Start Time of audio capture:" $(date) >> "${RUNFILE}"
 
 cd /media/DATA
 
-arecord -D sysdefault:CARD=sndrpihifiberry -r 48000 -d 3600 -f S16_LE -t wav -V mono KaniMoana1.$(date +%Y%m%d%H%M%S).wav
+arecord -D sysdefault:CARD=sndrpihifiberry -r 48000 -d 3600 -f S16_LE -t wav -V mono KaniMoana1.$(date +%y%m%d%H%M%S).wav
 
 # ------------------------------------------------------------
 # Ending audio capture...
 # ------------------------------------------------------------
 
-cd /media/DATA && echo "End Time of audio capture:" $(date) >> "${RUNFILE}"
+cd /media/DATA && sudo echo "End Time of audio capture:" $(date) >> "${RUNFILE}"
 
 # ------------------------------------------------------------
 # Cleanup
@@ -52,7 +51,7 @@ cd /media/DATA && echo "End Time of audio capture:" $(date) >> "${RUNFILE}"
 echo ""
 echo "Cleaning up"
 
-cd /media/DATA && echo "End Time of audio_recording.sh" $(date) >> "${RUNFILE}"
+cd /media/DATA && sudo echo "End Time of audio_recording.sh" $(date) >> "${RUNFILE}"
 
 # ------------------------------------------------------------
 # Exit
@@ -60,5 +59,4 @@ cd /media/DATA && echo "End Time of audio_recording.sh" $(date) >> "${RUNFILE}"
 
 echo ""
 echo "Exit audio_recording.sh"
-echo ""
 exit 0
