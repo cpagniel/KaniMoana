@@ -27,9 +27,10 @@ echo "Y" | sudo apt upgrade
 # Configure TimeZone RaspberryPi
 # ------------------------------------------------------------
 
+echo ""
 echo "Configuring RPi time zone..."
-
 echo "Set timezone to US/Hawaii."
+echo ""
 sudo timedatectl set-timezone US/Hawaii
 
 # ------------------------------------------------------------
@@ -61,8 +62,8 @@ sudo chown -R pi:pi /media/DATA
 # ------------------------------------------------------------
 
 echo "Creating directories for KaniMoana..."
-echo "
-"
+echo ""
+
 cd /home/pi
 sudo mkdir kanimoana
 
@@ -105,16 +106,19 @@ echo ""
 
 cd /home/pi
 
-sudo echo "" >> ~/.bashrc
-sudo echo "# Audio Capture for KaniMoana" >> ~/.bashrc
-sudo echo "" >> ~/.bashrc
-sudo echo "sleep 10" >> ~/.bashrc
-sudo echo "cd /home/pi/kanimoana" >> ~/.bashrc
-sudo echo "sudo ./KaniMoana.sh" >> ~/.bashrc
+sudo echo "" >> .bashrc
+sudo echo "# Audio Capture for KaniMoana" >> .bashrc
+sudo echo "" >> .bashrc
+sudo echo "sleep 10" >> .bashrc
+sudo echo "" >> .bashrc
+sudo echo "cd /home/pi/kanimoana" >> .bashrc
+sudo echo "sudo ./KaniMoana.sh" >> .bashrc
 
 # ------------------------------------------------------------
 # Shutdown to Add WittyPi & HifiBerry
 # ------------------------------------------------------------
+
+sleep 5
 
 echo "Installation sucessful!"
 echo ""
