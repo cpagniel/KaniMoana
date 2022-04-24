@@ -4,7 +4,7 @@
 #
 #
 #  Author: Camille Pagniello
-#  Last Edit: 04/23/2022
+#  Last Edit: 04/24/2022
 #  Script to schedule wittyPi and record audio
 #
 
@@ -24,13 +24,10 @@ sudo apt update
 echo "Y" | sudo apt upgrade
 
 # ------------------------------------------------------------
-# Configure RaspberryPi
+# Configure TimeZone RaspberryPi
 # ------------------------------------------------------------
 
 echo "Configuring RPi..."
-
-echo "Set hostname to kanimoana1."
-sudo hostname kanimoana1
 
 echo "Set timezone to US/Hawaii."
 sudo timedatectl set-timezone US/Hawaii
@@ -80,9 +77,6 @@ echo "Downloading KaniMoana configuration files from GitHub..."
 echo ""
 
 cd /home/pi/kanimoana/config
-
-wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/config/config.txt
-cp config.txt /boot
 
 wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/config/asound.conf
 cp asound.conf /etc
