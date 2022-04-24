@@ -27,7 +27,7 @@ echo "Y" | sudo apt upgrade
 # Configure TimeZone RaspberryPi
 # ------------------------------------------------------------
 
-echo "Configuring RPi..."
+echo "Configuring RPi time zone..."
 
 echo "Set timezone to US/Hawaii."
 sudo timedatectl set-timezone US/Hawaii
@@ -79,7 +79,7 @@ echo ""
 cd /home/pi/kanimoana/config
 
 wget https://raw.githubusercontent.com/cpagniel/KaniMoana/master/software/config/asound.conf
-cp asound.conf /etc
+sudo cp asound.conf /etc
 
 # ------------------------------------------------------------
 # Get KaniMoana Software from GitHub
