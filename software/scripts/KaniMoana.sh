@@ -48,6 +48,7 @@ cd /media/DATA && echo "Start Time of KaniMoana.sh" $(date) >> "${RUNFILE}"
 echo ""
 echo "Adjust Gain"
 cd /media/DATA && sudo echo "ADC gain: 48 dB" >> "${RUNFILE}"
+sudo echo "" >> "${RUNFILE}"
 amixer -D sysdefault -c sndrpihifiberry cset name='ADC Capture Volume' 96,96
 
 # ------------------------------------------------------------
