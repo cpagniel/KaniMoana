@@ -47,6 +47,19 @@ sudo sh install.sh
 echo "Y" | rm install.sh
 
 # ------------------------------------------------------------
+# Install WiringPi
+# ------------------------------------------------------------
+
+echo "Installing WiringPi..."
+echo ""
+
+cd /home/pi
+git clone https://github.com/WiringPi/WiringPi.git
+
+cd WiringPi
+./build
+
+# ------------------------------------------------------------
 # Configure USB Mount Location
 # ------------------------------------------------------------
 
