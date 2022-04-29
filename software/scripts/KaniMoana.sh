@@ -83,6 +83,27 @@ do
   cd /media/DATA && sudo echo "wittyPi Temperature at" $(date +%T)":" $temp >> "${RUNFILE}"
 
   # ------------------------------------------------------------
+  # Get Input and Output Voltage
+  # ------------------------------------------------------------
+
+  . /home/pi/wittypi/utilities.sh
+
+  cd /home/pi/wittypi && v_in="$(get_input_voltage)"
+  cd /media/DATA && sudo echo "wittyPi Input Voltage at" $(date +%T)":" $v_in >> "${RUNFILE}"
+
+  cd /home/pi/wittypi && v_out="$(get_output_voltage)"
+  cd /media/DATA && sudo echo "wittyPi Output Voltage at" $(date +%T)":" $v_out >> "${RUNFILE}"
+
+  # ------------------------------------------------------------
+  # Get Output Current
+  # ------------------------------------------------------------
+
+  . /home/pi/wittypi/utilities.sh
+
+  cd /home/pi/wittypi && c_out="$(get_output_current)"
+  cd /media/DATA && sudo echo "wittyPi Output Current at" $(date +%T)":" $c_out >> "${RUNFILE}"
+
+  # ------------------------------------------------------------
   # Check USB space
   # ------------------------------------------------------------
 
